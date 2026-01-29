@@ -11,7 +11,7 @@ const VideoSection = () => {
         loop
         playsInline
       >
-        <source src="/public/assets/v6.mov" type="video/mp4" />
+        <source src="/public/assets/v6.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay */}
@@ -20,7 +20,7 @@ const VideoSection = () => {
       {/* Center Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-center px-4">
         {/* Glass Panel for Main Heading */}
-        <div className="px-6 sm:px-10 py-4 sm:py-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/20 animate-fadeInScale max-w-[90%] sm:max-w-[80%] lg:max-w-[70%]">
+        <div className="px-6 sm:px-10 py-4 sm:py-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/20 animate-fadeInScale max-w-[90%] sm:max-w-[80%] lg:max-w-[90%]">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide md:tracking-widest drop-shadow-[0_0_20px_rgba(255,255,255,0.25)] text-[#f5f7fa]">
             Physics and <span className="text-[#cfe0ff]">Cosmos</span>
           </h1>

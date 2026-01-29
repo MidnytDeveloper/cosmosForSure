@@ -20,20 +20,48 @@ const Contactus = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-5">
-      <div className="bg-white shadow-lg rounded-xl p-8 max-w-md w-full">
-        <h1 className="text-2xl font-bold mb-5 text-gray-800 text-center">
+    <div className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+      
+      {/* 🌌 Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blac-900 to-black"></div>
+
+      {/* ✨ Glass Form */}
+      <div className="
+        relative
+        bg-white/10
+        backdrop-blur-lg
+        border border-white/20
+        shadow-2xl
+        rounded-2xl
+        p-8
+        max-w-md
+        w-full
+        text-white
+        my-40
+      ">
+        <h1 className="text-3xl font-extrabold mb-6 text-center tracking-wide">
           Contact Us
         </h1>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
             placeholder="Your Name"
-            className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="
+              bg-white/20
+              text-white
+              placeholder-white/70
+              px-4 py-2
+              rounded-lg
+              border border-white/30
+              focus:outline-none
+              focus:ring-2
+              focus:ring-blue-400
+            "
             required
           />
 
@@ -43,7 +71,17 @@ const Contactus = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Your Email"
-            className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="
+              bg-white/20
+              text-white
+              placeholder-white/70
+              px-4 py-2
+              rounded-lg
+              border border-white/30
+              focus:outline-none
+              focus:ring-2
+              focus:ring-blue-400
+            "
             required
           />
 
@@ -52,14 +90,35 @@ const Contactus = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder="Your Message"
-            className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
             rows={5}
+            className="
+              bg-white/20
+              text-white
+              placeholder-white/70
+              px-4 py-2
+              rounded-lg
+              border border-white/30
+              focus:outline-none
+              focus:ring-2
+              focus:ring-blue-400
+            "
             required
           />
 
           <button
             type="submit"
-            className="bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors"
+            className="
+              mt-2
+              bg-blue-500/80
+              hover:bg-blue-600
+              text-white
+              font-semibold
+              py-2
+              rounded-lg
+              transition-all
+              duration-300
+              shadow-md
+            "
           >
             Send Message
           </button>
