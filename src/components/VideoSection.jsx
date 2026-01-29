@@ -11,7 +11,7 @@ const VideoSection = () => {
         loop
         playsInline
       >
-        <source src="/public/assets/v6.mp4" type="video/mp4" />
+        <source src="/public/assets/v5.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay */}

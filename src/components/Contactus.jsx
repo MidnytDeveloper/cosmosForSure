@@ -21,12 +21,12 @@ const Contactus = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-      
       {/* 🌌 Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blac-900 to-black"></div>
 
       {/* ✨ Glass Form */}
-      <div className="
+      <div
+        className="
         relative
         bg-white/10
         backdrop-blur-lg
@@ -38,13 +38,13 @@ const Contactus = () => {
         w-full
         text-white
         my-40
-      ">
+      "
+      >
         <h1 className="text-3xl font-extrabold mb-6 text-center tracking-wide">
           Contact Us
         </h1>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          
           <input
             type="text"
             name="name"
