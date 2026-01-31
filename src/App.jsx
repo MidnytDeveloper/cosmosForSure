@@ -19,11 +19,13 @@ import Thebigbang from "./components/Cards/Thebigbang";
 import Theexpansion from "./components/Cards/Theexpansion";
 import Thejourneybegins from "./components/Cards/Thejourneybegins";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <div>
       <Header />
+      <ScrollToTop/>
       <Outlet />
       <Footer/>
     </div>
