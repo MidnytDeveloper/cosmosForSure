@@ -11,7 +11,11 @@ const VideoSection = () => {
         loop
         playsInline
       >
-        <source src="/public/assets/v5.mp4" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/dtsp8zzu3/video/upload/f_mp4,q_auto/v1769672651/v6_ate4fr.mov"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
       </video>
 
       {/* Dark overlay */}
@@ -26,7 +30,7 @@ const VideoSection = () => {
           </h1>
         </div>
 
-        {/* Subtitle with enhanced typing + heavier font */}
+        {/* Subtitle with typing effect */}
         <div className="mt-4 sm:mt-6 text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold tracking-wide relative max-w-[90%] sm:max-w-[80%]">
           <Typewriter
             options={{
@@ -44,14 +48,27 @@ const VideoSection = () => {
         </div>
       </div>
 
-      {/* Tailwind animations for glow */}
+      {/* Animations */}
       <style>
         {`
           @keyframes fadeInGlow {
-            0% { opacity: 0; transform: scale(0.95); text-shadow: 0 0 0px #fff; }
-            50% { opacity: 1; transform: scale(1.02); text-shadow: 0 0 15px #cfe0ff; }
-            100% { opacity: 1; transform: scale(1); text-shadow: 0 0 5px #cfe0ff; }
+            0% {
+              opacity: 0;
+              transform: scale(0.95);
+              text-shadow: 0 0 0px #fff;
+            }
+            50% {
+              opacity: 1;
+              transform: scale(1.02);
+              text-shadow: 0 0 15px #cfe0ff;
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+              text-shadow: 0 0 5px #cfe0ff;
+            }
           }
+
           .animate-fadeInGlow {
             display: inline-block;
             animation: fadeInGlow 1s ease-in-out forwards;
