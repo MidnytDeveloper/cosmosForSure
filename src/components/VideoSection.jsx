@@ -6,8 +6,8 @@ const VideoSection = () => {
       className="
   relative w-full overflow-hidden
     h-[40vh]
-    sm:h-[50vh]
-    md:h-[60vh]
+    sm:h-[45vh]
+    md:h-[45vh]
     lg:h-[100vh]
 "
     >
