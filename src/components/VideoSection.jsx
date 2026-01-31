@@ -2,7 +2,15 @@ import Typewriter from "typewriter-effect";
 
 const VideoSection = () => {
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden">
+    <div
+      className="
+  relative w-full overflow-hidden
+    h-[40vh]
+    sm:h-[50vh]
+    md:h-[60vh]
+    lg:h-[100vh]
+"
+    >
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
