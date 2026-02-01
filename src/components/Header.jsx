@@ -13,29 +13,54 @@ const Header = () => {
   return (
     <>
       {/* HEADER */}
-      <div className="absolute top-0 left-0 w-full z-50 flex items-center px-6 py-4">
-        {/* Hamburger */}
+      <div className="absolute top-0 left-0 w-full z-50 flex items-center px-6 py-10 font-primary">
+        {/* Hamburger (Mobile) */}
         <div
-          className="md:hidden flex flex-col gap-1 cursor-pointer"
-          onClick={() => setOpen(true)}
+          className="md:hidden flex flex-col gap-1 cursor-pointer z-50"
+          onClick={() => setOpen(!open)}
         >
-          <span className="w-6 h-[2px] bg-gray-800"></span>
-          <span className="w-6 h-[2px] bg-gray-800"></span>
-          <span className="w-6 h-[2px] bg-gray-800"></span>
+          <span
+            className={`block w-6 h-[2px] bg-white transition-all duration-300 ease-in-out ${
+              open ? "rotate-45 translate-y-2" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-6 h-[2px] bg-white transition-all duration-300 ease-in-out ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
+          ></span>
+          <span
+            className={`block w-6 h-[2px] bg-white transition-all duration-300 ease-in-out ${
+              open ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          ></span>
         </div>
 
         {/* Logo */}
-        <p className="absolute left-1/2 -translate-x-1/2 text-2xl font-semibold tracking-wide md:static md:translate-x-0 text-white">
-          CosmosForSure
-        </p>
+        <img
+          src="/assets/logo.png"
+          alt="CosmosForSure"
+          className="
+            absolute left-1/2 -translate-x-1/2 translate-x-20
+            h-8 md:h-10
+            object-contain
+            md:static md:translate-x-20
+          "
+        />
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-6 justify-center flex-1">
+        <div className="hidden md:flex gap-6 flex-1 ml-80">
           {menuItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
-              className="text-white text-lg font-medium hover:text-gray-300 transition-colors"
+              className="
+                text-white
+                text-sm
+                font-normal
+                hover:text-gray-300
+                transition-colors
+              "
             >
               {item.name}
             </Link>
@@ -51,9 +76,9 @@ const Header = () => {
         />
       )}
 
-      {/* Side Menu */}
+      {/* Side Menu (Mobile) */}
       {open && (
-        <div className="fixed top-0 left-0 h-full w-72 bg-white/70 backdrop-blur-xl z-50 shadow-xl">
+        <div className="fixed top-0 left-0 h-full w-72 bg-white/70 backdrop-blur-xl z-50 shadow-xl font-primary">
           <div
             className="text-2xl p-5 cursor-pointer text-gray-700"
             onClick={() => setOpen(false)}

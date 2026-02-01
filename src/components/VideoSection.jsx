@@ -4,12 +4,12 @@ const VideoSection = () => {
   return (
     <div
       className="
-  relative w-full overflow-hidden
-    h-[40vh]
-    sm:h-[45vh]
-    md:h-[45vh]
-    lg:h-[100vh]
-"
+        relative w-full overflow-hidden
+        h-[40vh]
+        sm:h-[45vh]
+        md:h-[45vh]
+        lg:h-[100vh]
+      "
     >
       {/* Background Video */}
       <video
@@ -20,10 +20,7 @@ const VideoSection = () => {
         playsInline
       >
         <source
-          // src="https://res.cloudinary.com/dtsp8zzu3/video/upload/f_mp4,q_auto/v1769672651/v6_ate4fr.mov"
-          // src="https://res.cloudinary.com/dtsp8zzu3/video/upload/v1769929935/kcognf6f6vkeg2mtefby.mp4"
           src="https://res.cloudinary.com/dtsp8zzu3/video/upload/v1769930115/rx9p8hdpx2dhg1dspywz.mp4"
-          
           type="video/mp4"
         />
         Your browser does not support the video tag.
@@ -32,17 +29,21 @@ const VideoSection = () => {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/35"></div>
 
-      {/* Center Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-center px-4">
-        {/* Glass Panel for Main Heading */}
-        <div className="px-6 sm:px-10 py-4 sm:py-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/20 animate-fadeInScale max-w-[90%] sm:max-w-[80%] lg:max-w-[90%]">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide md:tracking-widest drop-shadow-[0_0_20px_rgba(255,255,255,0.25)] text-[#f5f7fa]">
-            Physics and <span className="text-[#cfe0ff]">Cosmos</span>
-          </h1>
-        </div>
+      {/* Left-Aligned Content */}
+      <div className="absolute inset-0 flex flex-col justify-center z-10 px-8 sm:px-12 lg:px-24">
+       <div className="max-w-full">
+  <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-wide md:tracking-widest drop-shadow-[0_0_20px_rgba(255,255,255,0.25)] text-[#f5f7fa] text-left">
+    Physics <br />
+    <span className="text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-bold">and</span>{" "}
+    <span className="text-[#cfe0ff]">
+      <br />
+      Cosmos
+    </span>
+  </h1>
+</div>
 
-        {/* Subtitle with typing effect */}
-        <div className="mt-4 sm:mt-6 text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold tracking-wide relative max-w-[90%] sm:max-w-[80%]">
+
+        <div className="mt-4 sm:mt-6 text-sm sm:text-base md:text-2xl lg:text-3xl font-semibold tracking-wide relative max-w-[100%] sm:max-w-[80%] text-left">
           <Typewriter
             options={{
               strings: [
