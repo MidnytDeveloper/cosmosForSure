@@ -35,7 +35,7 @@ const Aboutus = () => {
       >
         {/* Profile Image */}
         <motion.img
-          src="/public/assets/ankit2.jpeg"
+          src="https://res.cloudinary.com/dtsp8zzu3/image/upload/v1769937452/k7taobepdi0qjbhov4r8.jpg"
           alt="Ankit Dhar Dubey"
           className="w-32 h-32 md:w-36 md:h-36 rounded-full border-2 border-blue-500 shadow-lg mb-6 object-cover"
           initial={{ opacity: 0, y: -20 }}
