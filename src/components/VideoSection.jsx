@@ -20,7 +20,10 @@ const VideoSection = () => {
         playsInline
       >
         <source
-          src="https://res.cloudinary.com/dtsp8zzu3/video/upload/f_mp4,q_auto/v1769672651/v6_ate4fr.mov"
+          // src="https://res.cloudinary.com/dtsp8zzu3/video/upload/f_mp4,q_auto/v1769672651/v6_ate4fr.mov"
+          // src="https://res.cloudinary.com/dtsp8zzu3/video/upload/v1769929935/kcognf6f6vkeg2mtefby.mp4"
+          src="https://res.cloudinary.com/dtsp8zzu3/video/upload/v1769930115/rx9p8hdpx2dhg1dspywz.mp4"
+          
           type="video/mp4"
         />
         Your browser does not support the video tag.
