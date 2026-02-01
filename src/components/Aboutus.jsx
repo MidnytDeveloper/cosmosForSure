@@ -23,7 +23,9 @@ const Aboutus = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-screen bg-gray-900 flex flex-col items-center justify-start px-4 pt-32 pb-12 overflow-hidden">
+<div className="relative w-full min-h-screen bg-gray-900 flex flex-col items-center justify-start 
+                px-4 pt-20 md:pt-40 pb-12 md:pb-6 overflow-hidden">
+    
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black/80 animate-gradientBackground -z-10"></div>
 
       {/* Main Card */}
