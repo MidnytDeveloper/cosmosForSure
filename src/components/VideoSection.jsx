@@ -31,17 +31,39 @@ const VideoSection = () => {
 
       {/* Left-Aligned Content */}
       <div className="absolute inset-0 flex flex-col justify-center z-10 px-8 sm:px-12 lg:px-24">
-       <div className="max-w-full">
-  <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-wide md:tracking-widest drop-shadow-[0_0_20px_rgba(255,255,255,0.25)] text-[#f5f7fa] text-left">
-    Physics <br />
-    <span className="text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-bold">and</span>{" "}
-    <span className="text-[#cfe0ff]">
-      <br />
-      Cosmos
-    </span>
-  </h1>
-</div>
-
+        <div className="max-w-full">
+          <h1
+            className="
+  text-4xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
+  font-extrabold tracking-wide md:tracking-widest
+  leading-[1.15]
+  drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]
+  text-[#f5f7fa] text-left
+"
+          >
+            Physics
+            <span
+              className="
+    block
+    -mt-0.5 sm:-mt-1 md:-mt-2
+    text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
+    font-bold
+  "
+            >
+              and
+            </span>
+            <span
+              className="
+    block
+    mt-0 sm:mt-0.5 md:mt-1
+    text-[#cfe0ff]
+    text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
+  "
+            >
+              Cosmos
+            </span>
+          </h1>
+        </div>
 
         <div className="mt-4 sm:mt-6 text-sm sm:text-base md:text-2xl lg:text-3xl font-semibold tracking-wide relative max-w-[100%] sm:max-w-[80%] text-left">
           <Typewriter
