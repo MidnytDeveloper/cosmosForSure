@@ -13,7 +13,8 @@ const Header = () => {
   return (
     <>
       {/* HEADER */}
-      <div className="
+      <div
+        className="
         fixed top-0 left-0 w-full z-50
         flex items-center
         px-6 py-4
@@ -21,28 +22,37 @@ const Header = () => {
         bg-black/20
         backdrop-blur-md
         border-b border-white/10
-      ">
+      "
+      >
         {/* Hamburger */}
         <div
           className="md:hidden flex flex-col gap-1 cursor-pointer z-50"
           onClick={() => setOpen(!open)}
         >
-          <span className={`block w-6 h-[2px] bg-white transition-all ${open ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-[2px] bg-white transition-all ${open ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-[2px] bg-white transition-all ${open ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span
+            className={`block w-6 h-[2px] bg-white transition-all ${open ? "rotate-45 translate-y-2" : ""}`}
+          />
+          <span
+            className={`block w-6 h-[2px] bg-white transition-all ${open ? "opacity-0" : ""}`}
+          />
+          <span
+            className={`block w-6 h-[2px] bg-white transition-all ${open ? "-rotate-45 -translate-y-2" : ""}`}
+          />
         </div>
 
         {/* Logo */}
-        <img
-          src="/assets/logo.png"
-          alt="CosmosForSure"
-          className="
-            absolute left-1/2 -translate-x-1/2 translate-x-20
-            h-8 md:h-10
-            object-contain
-            md:static md:translate-x-0
-          "
-        />
+        <Link to="/" className="cursor-pointer">
+          <img
+            src="/assets/logo.png"
+            alt="CosmosForSure"
+            className="
+      absolute left-1/2 -translate-x-1/2
+      h-8 md:h-10
+      object-contain
+      md:static md:translate-x-0
+    "
+          />
+        </Link>
 
         {/* Desktop Menu (RIGHT aligned) */}
         <div className="hidden md:flex gap-6 ml-auto">
@@ -68,11 +78,13 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="
+        <div
+          className="
           fixed top-0 left-0 h-full w-72
           bg-black/30 backdrop-blur-xl
           z-50 shadow-xl
-        ">
+        "
+        >
           <div
             className="text-2xl p-5 cursor-pointer text-white"
             onClick={() => setOpen(false)}
