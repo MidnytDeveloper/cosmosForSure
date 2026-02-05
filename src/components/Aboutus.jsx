@@ -58,7 +58,7 @@ const Aboutus = () => {
             transition={{ delay: 0.3, duration: 1.2 }}
             className="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg"
           >
-            About Me
+            Ankit Dhar Dubey
           </motion.h1>
 
           {/* Description */}
