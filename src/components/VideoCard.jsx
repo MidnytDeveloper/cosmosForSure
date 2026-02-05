@@ -210,13 +210,18 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
         </span>
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent/30 pointer-events-none" />
-
+<div
+  className="
+    absolute inset-0 
+    bg-gradient-to-t from-black/40 via-black/20 to-transparent/10
+    pointer-events-none
+  "
+/>
         {/* Title overlay - moved up a little */}
        {/* Title overlay - moved slightly lower */}
 <div
   className={`
-    absolute left-5 right-5 top-48 /* moved lower than before */
+    absolute left-5 right-5 top-60 /* moved lower than before */
     z-10
     transition-all duration-700 ease-out
     ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
