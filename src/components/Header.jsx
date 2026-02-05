@@ -66,7 +66,13 @@ const Header = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="text-white text-sm hover:text-gray-300 transition"
+              className="
+        text-sm
+        bg-gradient-to-b from-white to-cyan-400
+        bg-clip-text text-transparent
+        hover:from-white hover:to-cyan-300
+        transition-all
+      "
             >
               {item.name}
             </Link>

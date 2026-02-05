@@ -15,7 +15,7 @@ const BlackHole = () => {
     lg:mt-24 lg:mb-12
   "
     >
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Black Holes</h1>
+      <h1 className="text-3xl font-bold text-cyan-400 mb-2">Black Holes</h1>
 
       <p className="text-sm text-gray-600 mb-6">
         Posted on <span className="font-semibold">September 3, 2018</span> by{" "}

@@ -12,7 +12,7 @@ const Bosons = () => {
     lg:mt-24 lg:mb-12
   "
     >
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">
+      <h1 className="text-3xl font-bold text-cyan-400 mb-2">
         Fermions, Bosons & Fundamental Forces
       </h1>
 

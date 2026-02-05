@@ -11,7 +11,7 @@ const Theexpansion = () => {
   "
     >
       {/* Header */}
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">
+      <h1 className="text-3xl font-bold text-cyan-400 mb-2">
         The Big Bang & Planck Era
       </h1>
 

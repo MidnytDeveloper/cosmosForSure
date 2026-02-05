@@ -30,57 +30,61 @@ const VideoSection = () => {
       <div className="absolute inset-0 bg-black/15"></div>
 
       {/* Left-Aligned Content */}
-      <div className="absolute inset-0 flex flex-col justify-center z-10 px-8 sm:px-12 lg:px-24">
-        <div className="max-w-full">
-          <h1
-            className="
-  text-6xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
-  font-extrabold tracking-wide md:tracking-widest
-  leading-[1.15]
-  drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]
-  text-[#f5f7fa] text-left
-"
-          >
-            Physics
-              <span
-              className="
-    block
-    mt-0 sm:mt-0.5 md:mt-0.8
-    text-[#cfe0ff]
-text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl
-  "
-            >
-              and
-            </span>
-            <span
-              className="
-    block
-    mt-0 sm:mt-0.5 md:mt-0.5
-    text-[#cfe0ff]
-text-6xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
-  "
-            >
-              Cosmos
-            </span>
-          </h1>
-        </div>
+     <div className="absolute inset-0 flex flex-col justify-center z-10 px-8 sm:px-12 lg:px-24">
+  <div className="max-w-full">
+    <h1
+      className="
+        text-6xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
+        font-extrabold tracking-wide md:tracking-widest
+        leading-[1.15]
+        text-left
+        bg-gradient-to-b from-white to-cyan-400
+        bg-clip-text text-transparent
+      "
+    >
+      Physics
+      <span
+        className="
+          block
+          mt-0 sm:mt-0.5 md:mt-0.8
+          text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl
+          bg-gradient-to-b from-white to-cyan-400
+          bg-clip-text text-transparent
+        "
+      >
+        and
+      </span>
+      <span
+        className="
+          block
+          mt-0 sm:mt-0.5 md:mt-0.5
+          text-6xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
+          bg-gradient-to-b from-white to-cyan-400
+          bg-clip-text text-transparent
+        "
+      >
+        Cosmos
+      </span>
+    </h1>
+  </div>
 
-        <div className="mt-4 sm:mt-6 text-sm sm:text-base md:text-2xl lg:text-3xl font-semibold tracking-wide relative max-w-[100%] sm:max-w-[80%] text-left">
-          <Typewriter
-            options={{
-              strings: [
-                "<span class='text-white/80 animate-fadeInGlow'>Get to know the deepest secret of cosmos.</span>",
-              ],
-              autoStart: true,
-              loop: true,
-              delay: 50,
-              deleteSpeed: 30,
-              pauseFor: 2000,
-              wrapperClassName: "text-white/80 font-semibold",
-            }}
-          />
-        </div>
-      </div>
+  <div className="mt-4 sm:mt-6 text-sm sm:text-base md:text-2xl lg:text-3xl font-semibold tracking-wide relative max-w-[100%] sm:max-w-[80%] text-left">
+    <Typewriter
+      options={{
+        strings: [
+          "<span class='bg-gradient-to-b from-white to-cyan-400 bg-clip-text text-transparent font-semibold animate-fadeInGlow'>Get to know the deepest secret of cosmos.</span>",
+        ],
+        autoStart: true,
+        loop: true,
+        delay: 50,
+        deleteSpeed: 30,
+        pauseFor: 2000,
+        wrapperClassName: "font-semibold",
+      }}
+    />
+  </div>
+</div>
+
 
       {/* Animations */}
       <style>
