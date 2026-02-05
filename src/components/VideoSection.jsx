@@ -5,10 +5,10 @@ const VideoSection = () => {
     <div
       className="
         relative w-full overflow-hidden
-        h-[40vh]
-        sm:h-[45vh]
-        md:h-[45vh]
-        lg:h-[100vh]
+      h-[40vh]
+    sm:h-[45vh]      
+    md:h-[28hivh]      
+    lg:h-[100vh]
       "
     >
       {/* Background Video */}
@@ -20,14 +20,14 @@ const VideoSection = () => {
         playsInline
       >
         <source
-          src="https://res.cloudinary.com/dtsp8zzu3/video/upload/v1769930115/rx9p8hdpx2dhg1dspywz.mp4"
+          src="https://res.cloudinary.com/dtsp8zzu3/video/upload/v1770276066/opv1nwmr3k2xaxelh88a.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/35"></div>
+      <div className="absolute inset-0 bg-black/15"></div>
 
       {/* Left-Aligned Content */}
       <div className="absolute inset-0 flex flex-col justify-center z-10 px-8 sm:px-12 lg:px-24">
