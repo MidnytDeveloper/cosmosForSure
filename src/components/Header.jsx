@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  // Check if current page is Home
+  const isHome = location.pathname === "/";
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -14,15 +18,16 @@ const Header = () => {
     <>
       {/* HEADER */}
       <div
-        className="
+        className={`
           fixed top-0 left-0 w-full z-50
           flex items-center justify-between
           px-6 py-4
           font-primary
-          bg-black/20
           backdrop-blur-md
           border-b border-white/10
-        "
+          transition-colors duration-300
+          ${isHome ? "bg-black/20" : "bg-black/60"}
+        `}
       >
         {/* Hamburger (LEFT in mobile) */}
         <div
@@ -46,11 +51,8 @@ const Header = () => {
           />
         </div>
 
-        {/* Logo (RIGHT in mobile, LEFT in desktop) */}
-        <Link
-          to="/"
-          className="flex items-center order-2 md:order-1"
-        >
+        {/* Logo */}
+        <Link to="/" className="flex items-center order-2 md:order-1">
           <img
             src="/assets/logo.png"
             alt="CosmosForSure"
@@ -58,7 +60,7 @@ const Header = () => {
           />
         </Link>
 
-        {/* Desktop Menu (RIGHT side) */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex gap-6 ml-auto order-2">
           {menuItems.map((item) => (
             <Link
@@ -75,7 +77,7 @@ const Header = () => {
       {/* Overlay */}
       {open && (
         <div
-          className="fixed inset-0 bg-black/40 z-40"
+          className="fixed inset-0 bg-black/50 z-40"
           onClick={() => setOpen(false)}
         />
       )}
@@ -85,7 +87,7 @@ const Header = () => {
         <div
           className="
             fixed top-0 left-0 h-full w-72
-            bg-black/30 backdrop-blur-xl
+            bg-black/70 backdrop-blur-xl
             z-50 shadow-xl
           "
         >

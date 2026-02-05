@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
 
 const Roadtobigbang = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6 mt-10 
-                    bg-white/20 backdrop-blur-md 
-                    rounded-xl shadow-lg">
-      {/* Header */}
+    <div
+      className="
+    max-w-4xl
+    mx-4 sm:mx-auto
+    mt-20 mb-10
+    sm:mt-20 sm:mb-16
+    md:mt-24 md:mb-20
+    lg:mt-24 lg:mb-12
+  "
+    >
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
         The Expanding Universe & Cosmic Microwave Background
       </h1>
@@ -15,118 +21,117 @@ const Roadtobigbang = () => {
         <span className="font-semibold">Ankit Dhar Dubey</span>
       </p>
 
-      {/* Content */}
       <div className="prose prose-gray max-w-none text-gray-800">
         <p>
-          Until 1927, no one had ever thought of the idea of an expanding universe.
-          Even Albert Einstein made what he later called his biggest blunder —
-          the cosmological constant, better known as <b>Lambda (Λ)</b>, when he
-          formulated the General Theory of Relativity. At that time, Einstein
-          believed the universe to be static.
+          Until 1927, the idea of an expanding universe had never been
+          considered. Even Albert Einstein believed the universe to be static
+          when he formulated the General Theory of Relativity. To support this
+          belief, he introduced the cosmological constant, Lambda (Λ), which he
+          later called his greatest blunder.
         </p>
 
         <p>
-          A static universe, however, leads to collapse. According to Newton’s
-          law of gravitation, every body attracts every other body. In a static
-          universe, all heavenly objects would eventually fall into each other,
-          causing the universe to collapse.
+          A truly static universe, however, is unstable. According to Newton’s
+          law of gravitation, every object attracts every other object. In a
+          static universe, this attraction would eventually cause all matter to
+          collapse inward.
         </p>
 
         <p>
-          To avoid this collapse, Einstein introduced the cosmological constant,
-          Lambda, which acted as a repulsive force or vacuum pressure to keep the
-          universe stable.
+          To prevent such a collapse, Einstein introduced the cosmological
+          constant, which acted as a repulsive force or vacuum pressure,
+          maintaining balance within the universe.
         </p>
 
         <p>
-          In 1927, a Belgian astronomer and Catholic priest, <b>Georges Lemaître</b>,
-          proposed that the early universe was contained in a “cosmic egg” which
-          later exploded, initiating expansion. He also developed the
-          mathematical framework for an expanding universe. This was the first
-          major step toward the establishment of the <b>Big Bang Theory</b>.
+          In 1927, Belgian astronomer and Catholic priest{" "}
+          <b>Georges Lemaître</b>
+          proposed that the universe began as a “cosmic egg” that later
+          exploded, initiating expansion. He also provided the mathematical
+          framework for an expanding universe, laying the foundation for the Big
+          Bang Theory.
         </p>
 
         <p>
-          Two years later, in 1929, <b>Edwin Hubble</b> observed galaxies and
-          concluded that they were moving away from each other, as evidenced by
-          their red shift. He also discovered that the farther a galaxy is, the
-          faster it moves away.
+          In 1929, <b>Edwin Hubble</b> observed distant galaxies and found that
+          they were moving away from each other, as indicated by their red
+          shift. He also concluded that the farther a galaxy is, the faster it
+          moves away.
         </p>
 
         <p>
-          Hubble derived a mathematical relation now known as <b>Hubble’s Law</b>:
-        </p>
-
-        <p className="text-center font-semibold">
-          V = H × D
+          Hubble derived a mathematical relation known as <b>Hubble’s Law</b>:
         </p>
 
         <p>
-          where <b>V</b> is the recession velocity, <b>D</b> is the distance of
-          the galaxy, and <b>H</b> is the Hubble constant. The value of the Hubble
-          constant is approximately the inverse of the age of the universe.
+          <b>V = H × D</b>
         </p>
 
         <p>
-          From Hubble’s observations, scientists concluded that if all galaxies
-          are moving away from each other, then there must have been a time in
-          the past when all matter was concentrated at a single point. A cosmic
-          expansion was then initiated — giving rise to the Big Bang Theory.
+          where V is the recession velocity, D is the distance of the galaxy,
+          and H is the Hubble constant. The Hubble constant is approximately the
+          inverse of the age of the universe.
         </p>
 
         <p>
-          The first major observational proof of the Big Bang was the discovery
-          of the <b>Cosmic Microwave Background (CMB)</b>. It is the leftover
-          radiation from the early universe, spread uniformly throughout space
-          in the form of microwave radiation.
+          These observations led scientists to conclude that all matter in the
+          universe was once concentrated at a single point. The cosmic expansion
+          that followed gave rise to the Big Bang Theory.
         </p>
 
         <p>
-          The first complete atoms were formed about <b>380,000 years</b> after
-          the Big Bang, when the universe cooled to approximately <b>3000K</b>.
-          At this point, electrons combined with nuclei, allowing photons to
-          travel freely. This moment made the universe transparent.
+          The first major observational evidence of the Big Bang was the
+          discovery of the <b>Cosmic Microwave Background (CMB)</b> — leftover
+          radiation from the early universe uniformly distributed across space.
         </p>
 
         <p>
-          As the universe expanded, this light lost energy and shifted into the
-          microwave region of the spectrum, which we now observe as the Cosmic
-          Microwave Background.
+          About <b>380,000 years</b> after the Big Bang, the universe cooled to
+          approximately <b>3000K</b>. At this stage, electrons combined with
+          nuclei, forming the first atoms and allowing photons to travel freely.
+          This event made the universe transparent.
         </p>
 
         <p>
-          CMB was first theoretically studied in the 1940s by <b>Georges Gamow</b>.
-          In 1948, <b>Robert Herman</b> calculated its temperature to be about
-          5 Kelvin, remarkably close to the currently accepted value of
+          As the universe expanded, this radiation lost energy and shifted into
+          the microwave region of the spectrum, which we now observe as the
+          Cosmic Microwave Background.
+        </p>
+
+        <p>
+          The CMB was first studied theoretically in the 1940s by{" "}
+          <b>Georges Gamow</b>. In 1948, <b>Robert Herman</b> calculated its
+          temperature to be around
+          <b> 5 Kelvin</b>, remarkably close to the currently accepted value of
           <b> 2.7K</b>.
         </p>
 
         <p>
-          In 1964, <b>Robert Wilson</b>, while working on satellite communication
-          at AT&T Labs, detected unexplained noise in antenna signals. After
-          eliminating all possible sources, the noise persisted.
+          In 1964, <b>Robert Wilson</b>, while working on satellite
+          communication at AT&T Labs, detected unexplained noise in antenna
+          signals. After ruling out all known sources, the noise persisted.
         </p>
 
         <p>
-          At the same time, <b>Robert Dicke</b> at Princeton University was
-          researching the Cosmic Microwave Background. When they compared notes,
-          it became clear that the mysterious noise was actually the microwave
-          background radiation.
+          Meanwhile, <b>Robert Dicke</b> at Princeton University was studying
+          the Cosmic Microwave Background. When the two groups compared
+          findings, it became clear that the mysterious noise was actually the
+          microwave background radiation.
         </p>
 
         <p>
           Interestingly, the static noise heard during radio tuning is nothing
-          but the leftover radiation from the early universe.
+          but leftover radiation from the early universe.
         </p>
 
         <p>
-          Later discoveries of <b>dark matter</b> and the reintroduction of the
-          cosmological constant in 1998 led to the most accepted model of the
-          universe today:
+          Later discoveries of dark matter and the reintroduction of the
+          cosmological constant in 1998 led to the most widely accepted
+          cosmological model today:
         </p>
 
-        <p className="font-semibold text-center">
-          Lambda Cold Dark Matter (ΛCDM) Model
+        <p>
+          <b>Lambda Cold Dark Matter (ΛCDM) Model</b>
         </p>
 
         <p>
@@ -138,4 +143,4 @@ const Roadtobigbang = () => {
   );
 };
 
-export default Roadtobigbang
+export default Roadtobigbang;

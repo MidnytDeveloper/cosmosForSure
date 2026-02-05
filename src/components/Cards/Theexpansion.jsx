@@ -1,11 +1,14 @@
-import React from "react";
-
 const Theexpansion = () => {
   return (
     <div
-      className="max-w-4xl mx-auto p-6 mt-10 
-                    bg-white/20 backdrop-blur-md 
-                    rounded-xl shadow-lg"
+      className="
+    max-w-4xl
+    mx-4 sm:mx-auto
+    mt-20 mb-10
+    sm:mt-20 sm:mb-16
+    md:mt-24 md:mb-20
+    lg:mt-24 lg:mb-12
+  "
     >
       {/* Header */}
       <h1 className="text-3xl font-bold text-gray-900 mb-2">
