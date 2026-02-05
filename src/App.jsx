@@ -6,7 +6,9 @@ import Aboutus from "./components/Aboutus";
 import Contactus from "./components/Contactus";
 import Body from "./components/Body";
 import ErrorPage from "./components/ErrorPage";
-import BlackHole from "./components/Cards/BlackHole"
+import BlackHole from "./components/Cards/BlackHole";
+
+import { HelmetProvider } from "react-helmet-async";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Bosons from "./components/Cards/Bosons";
@@ -25,9 +27,9 @@ const App = () => {
   return (
     <div>
       <Header />
-      <ScrollToTop/>
+      <ScrollToTop />
       <Outlet />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
@@ -96,6 +98,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>,
 );
