@@ -219,27 +219,29 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
   "
         />
         {/* Title overlay - responsive positioning */}
-        <div
-          className={`
+        {/* Title overlay - responsive positioning, mobile higher */}
+<div
+  className={`
     absolute left-5 right-5
-    top-24 sm:top-48 md:top-48
+    top-52 sm:top-16 md:top-56
     z-10
     transition-all duration-700 ease-out
     ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
   `}
-        >
-          <h3
-            className="
+>
+  <h3
+    className="
       text-xl sm:text-2xl font-bold
       leading-tight
       mb-2
       bg-gradient-to-b from-white to-cyan-400
       bg-clip-text text-transparent
     "
-          >
-            {title}
-          </h3>
-        </div>
+  >
+    {title}
+  </h3>
+</div>
+
 
         {/* Explore button */}
         {link && (
