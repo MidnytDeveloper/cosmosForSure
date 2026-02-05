@@ -5,10 +5,10 @@ const VideoSection = () => {
     <div
       className="
         relative w-full overflow-hidden
-      h-[40vh]
-    sm:h-[45vh]      
-    md:h-[28vh]      
-    lg:h-[100vh]
+     h-[50vh]      
+    sm:h-[80vh]       
+    md:h-[28vh]       
+    lg:h-[100vh] 
       "
     >
       {/* Background Video */}
@@ -42,6 +42,16 @@ const VideoSection = () => {
 "
           >
             Physics
+              <span
+              className="
+    block
+    mt-0 sm:mt-0.5 md:mt-0.8
+    text-[#cfe0ff]
+text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl
+  "
+            >
+              and
+            </span>
             <span
               className="
     block
@@ -50,7 +60,7 @@ const VideoSection = () => {
 text-6xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
   "
             >
-              and Cosmos
+              Cosmos
             </span>
           </h1>
         </div>
