@@ -34,7 +34,7 @@ const VideoSection = () => {
         <div className="max-w-full">
           <h1
             className="
-  text-8xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
+  text-6xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
   font-extrabold tracking-wide md:tracking-widest
   leading-[1.15]
   drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]
@@ -47,7 +47,7 @@ const VideoSection = () => {
     block
     mt-0 sm:mt-0.5 md:mt-0.5
     text-[#cfe0ff]
-text-8xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
+text-6xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
   "
             >
               and Cosmos
