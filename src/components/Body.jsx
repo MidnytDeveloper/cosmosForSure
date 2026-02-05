@@ -7,6 +7,7 @@ const Body = () => {
     <div>
       <Helmet>
         <title>CosmosForSure</title>
+        
       </Helmet>
       <VideoSection />
       <VideoCardsSection />
