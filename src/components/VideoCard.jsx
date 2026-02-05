@@ -124,8 +124,6 @@
 // };
 
 // export default VideoCard;
-
-
 import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -155,7 +153,7 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
           setShowContent(true);
         }
       },
-      { threshold: 0.35 }
+      { threshold: 0.35 },
     );
 
     if (cardRef.current) observer.observe(cardRef.current);
@@ -165,7 +163,6 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
 
   return (
     <div ref={cardRef} className="relative group">
-      {/* Main card */}
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -176,6 +173,7 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
           transition-all duration-300
           hover:shadow-cyan-900/30
           hover:border-cyan-500/30
+          cut-card
         "
       >
         {/* Video */}
@@ -194,91 +192,73 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
           preload="metadata"
         />
 
-        {/* Stronger gradient overlay for better text readability */}
-        <div
+        {/* Category pill */}
+        <span
           className="
-            absolute inset-0 
-            bg-gradient-to-t from-black via-black/60 to-transparent/30
-            pointer-events-none
+            absolute top-4 left-4
+            inline-block
+            bg-gradient-to-r from-white/60 to-cyan-500/80
+            backdrop-blur-md
+            border border-cyan-400/30
+            text-black text-xs font-bold
+            px-3 py-1 rounded
+            uppercase tracking-wider
+            z-20
           "
-        />
-
-        {/* Content overlay - revealed on scroll */}
-        <div
-          className={`
-            absolute bottom-0 left-0 right-0
-            px-5 pb-6 pt-16
-            z-10
-            transition-all duration-700 ease-out
-            ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
-          `}
         >
-          {/* Category pill */}
-          <span
-            className="
-    absolute top-4 left-4
-    inline-block
-    bg-cyan-900/40 backdrop-blur-md
-    border border-cyan-400/30
-    text-cyan-300 text-xs font-bold
-    px-3 py-1 rounded-full
-    uppercase tracking-wider
-    z-20
-  "
-          >
-            {category}
-          </span>
+          {category}
+        </span>
 
-          {/* Title with glow */}
-          <h3
-            className="
-              text-white text-xl sm:text-2xl font-bold
-              leading-tight
-              drop-shadow-[0_4px_12px_rgba(0,212,255,0.5)]
-              mb-2
-            "
-          >
-            {title}
-          </h3>
-        </div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent/30 pointer-events-none" />
 
-        {/* Explore button - positioned bottom-right */}
+        {/* Title overlay - moved up a little */}
+       {/* Title overlay - moved slightly lower */}
+<div
+  className={`
+    absolute left-5 right-5 top-48 /* moved lower than before */
+    z-10
+    transition-all duration-700 ease-out
+    ${showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
+  `}
+>
+  <h3
+    className="
+      text-xl sm:text-2xl font-bold
+      leading-tight
+      mb-2
+      bg-gradient-to-b from-white to-cyan-400  /* top-to-bottom gradient */
+      bg-clip-text text-transparent
+    "
+  >
+    {title}
+  </h3>
+</div>
+
+
+        {/* Explore button */}
         {link && (
           <Link
             to={link}
             className="
-              absolute bottom-5 right-5
-              px-5 py-2
+              absolute bottom-3 right-3
+              px-2 py-1
               bg-gradient-to-r from-cyan-600 to-cyan-500
               hover:from-cyan-500 hover:to-cyan-400
-              text-white text-sm font-medium
-              rounded-full
+              text-white text-[10px] font-medium
+              rounded
               border border-cyan-300/40
-              shadow-lg shadow-cyan-900/40
+              shadow-sm shadow-cyan-900/20
               transition-all duration-300
-              hover:shadow-cyan-500/50
+              hover:shadow-cyan-500/30
               hover:scale-105
-              flex items-center gap-2
+              flex items-center gap-1
               z-20
             "
           >
             Explore →
           </Link>
         )}
-
-        {/* Custom cut-corner shape */}
-        <style jsx>{`
-          .cut-card {
-            clip-path: polygon(
-              0 0,
-              100% 0,
-              100% calc(100% - 36px),
-              calc(100% - 90px) calc(100% - 36px),
-              calc(100% - 90px) 100%,
-              0 100%
-            );
-          }
-        `}</style>
       </div>
     </div>
   );
