@@ -60,7 +60,6 @@
 
 // export default VideoCard;
 
-
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -76,6 +75,7 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
     }
   };
 
+ 
   return (
     <div className="relative">
       {/* Card */}
@@ -88,7 +88,16 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
         <video
           ref={videoRef}
           src={videoSrc}
-          className="w-full h-52 sm:h-60 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+          className="
+            w-full
+            h-72        /* ⬅️ taller on mobile */
+            sm:h-60
+            md:h-64
+            object-cover
+            transition-transform
+            duration-500
+            group-hover:scale-105
+          "
           muted
           loop
           playsInline
@@ -96,7 +105,7 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
         {/* Content */}
         <div className="absolute bottom-0 left-0 w-full px-4 py-4 z-10">
@@ -114,17 +123,19 @@ const VideoCard = ({ videoSrc, title, category, link }) => {
       {link && (
         <Link
           to={link}
-          className="absolute 
-                     bottom-0 right-0
-                     w-[4.9rem] h-[1.78rem]
-                     bg-red-600 text-white
-                     text-[11px] font-medium
-                     flex items-center justify-center
-                     border border-white/80
-                     hover:bg-red-700
-                     transition"
+          className="
+            absolute
+            bottom-0 right-0
+            w-[4.9rem] h-[1.78rem]
+            bg-red-600 text-white
+            text-[11px] font-medium
+            flex items-center justify-center
+            border border-white/80
+            hover:bg-red-700
+            transition
+          "
         >
-          Read more →
+          Explore →
         </Link>
       )}
 

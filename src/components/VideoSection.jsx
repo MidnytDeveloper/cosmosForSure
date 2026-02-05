@@ -45,22 +45,12 @@ const VideoSection = () => {
             <span
               className="
     block
-    -mt-0.5 sm:-mt-1 md:-mt-2
-    text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
-    font-bold
-  "
-            >
-              and
-            </span>
-            <span
-              className="
-    block
-    mt-0 sm:mt-0.5 md:mt-1
+    mt-0 sm:mt-0.5 md:mt-0.5
     text-[#cfe0ff]
     text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl
   "
             >
-              Cosmos
+              and Cosmos
             </span>
           </h1>
         </div>

@@ -84,15 +84,23 @@ const videosData = [
   },
 ];
 
+
 const VideoCardsSection = () => {
   return (
-    <div className="relative w-full py-12 px-4 md:px-10 lg:px-20 bg-gray-900">
-      <h2 className="text-3xl md:text-4xl text-white font-extrabold text-center mb-5">
-        Unveiling the Universe{" "}
+    <div className="relative w-full py-12 px-4 md:px-10 lg:px-20 bg-[#0f172a]">
+      {/* Section Heading */}
+      <h2 className="text-3xl md:text-4xl text-gray-100 font-extrabold text-center mb-3">
+        Unveiling the Universe
       </h2>
 
-      <div className="px-4 sm:px-6 lg:px-12 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <p className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
+        Explore breathtaking cosmic phenomena, galaxies, and mysteries of the
+        universe through our curated video collection.
+      </p>
+
+      {/* Video Cards Grid */}
+      <div className="px-2 sm:px-6 lg:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {videosData.map((video, index) => (
             <VideoCard
               key={index}
