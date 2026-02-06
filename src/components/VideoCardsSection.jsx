@@ -84,47 +84,32 @@ const videosData = [
   },
 ];
 
+
 const VideoCardsSection = () => {
   return (
-    <div
-      className="
-        relative w-full py-16 px-4 md:px-10 lg:px-20
-        bg-cover bg-center bg-no-repeat
-      "
-      style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dtsp8zzu3/image/upload/v1770395694/jo6zbf6uksoxgki8e4ag.png')",
-      }}
-    >
-      {/* Dark overlay for contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/90 via-[#020617]/70 to-[#020617]/90 backdrop-blur-[1px]" />
+    <div className="relative w-full py-12 px-4 md:px-10 lg:px-20 bg-[#0f172a]">
+      {/* Section Heading */}
+      <h2 className="text-3xl md:text-4xl text-gray-100 font-extrabold text-center mb-3">
+        Unveiling the Universe
+      </h2>
 
-      {/* Content wrapper (important for overlay layering) */}
-      <div className="relative z-10">
-        {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-3 text-white">
-          Unveiling the Universe
-        </h2>
+      <p className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
+        Explore breathtaking cosmic phenomena, galaxies, and mysteries of the
+        universe through our curated video collection.
+      </p>
 
-        <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
-          Explore breathtaking cosmic phenomena, galaxies, and mysteries of the
-          universe through our curated video collection.
-        </p>
-
-        {/* Video Cards Grid */}
-        <div className="px-2 sm:px-6 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {videosData.map((video, index) => (
-              <VideoCard
-                key={index}
-                videoSrc={video.videoSrc}
-                title={video.title}
-                category={video.category}
-                description={video.description}
-                link={video.link}
-              />
-            ))}
-          </div>
+      {/* Video Cards Grid */}
+      <div className="px-2 sm:px-6 lg:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {videosData.map((video, index) => (
+            <VideoCard
+              key={index}
+              videoSrc={video.videoSrc}
+              title={video.title}
+              category={video.category}
+              link={video.link}
+            />
+          ))}
         </div>
       </div>
     </div>
