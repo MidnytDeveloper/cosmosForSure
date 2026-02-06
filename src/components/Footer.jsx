@@ -1,6 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-[#0b1e2d] text-gray-300">
+<footer className="relative overflow-hidden bg-black text-gray-300">
+
+
       
       {/* Floating stars */}
       <div className="absolute inset-0 pointer-events-none">
