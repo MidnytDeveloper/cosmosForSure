@@ -1,3 +1,10 @@
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaGithub,
+} from "react-icons/fa";
+
 const Footer = () => {
   const stars = Array.from({ length: 22 });
 
@@ -7,9 +14,9 @@ const Footer = () => {
       {/* Moving stars */}
       <div className="absolute inset-0 pointer-events-none">
         {stars.map((_, i) => {
-          const size = Math.random() * 2 + 1; // 1–3px
+          const size = Math.random() * 2 + 1;
           const opacity = Math.random() * 0.5 + 0.2;
-          const duration = Math.random() * 20 + 20; // 20–40s
+          const duration = Math.random() * 20 + 20;
           const delay = Math.random() * 10;
           const isCyan = Math.random() > 0.8;
 
@@ -48,23 +55,47 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Center brand */}
-        <div className="flex flex-col items-center text-center">
-          <div className="mb-4 relative flex justify-center">
-            <span
-              className="
-                inline-block w-2 h-2 rounded-full bg-white
-                shadow-[0_0_20px_rgba(255,255,255,0.9)]
-                animate-orbitDot
-              "
-            />
-          </div>
-
-          <h2 className="text-cyan-400 text-lg font-semibold mb-3">
+        {/* Center brand + socials */}
+        <div className="flex flex-col items-center justify-center gap-6">
+          <h2
+            className="
+              text-cyan-400
+              text-3xl md:text-4xl
+              font-bold
+              tracking-widest
+              drop-shadow-[0_0_12px_rgba(34,211,238,0.4)]
+            "
+          >
             CosmosForSure
           </h2>
 
-         
+          {/* Social icons */}
+          <div className="flex gap-5">
+            <a
+              href="#"
+              className="p-3 rounded-full border border-white/10 hover:border-cyan-400 hover:text-cyan-400 transition"
+            >
+              <FaFacebookF size={16} />
+            </a>
+            <a
+              href="#"
+              className="p-3 rounded-full border border-white/10 hover:border-cyan-400 hover:text-cyan-400 transition"
+            >
+              <FaInstagram size={16} />
+            </a>
+            <a
+              href="#"
+              className="p-3 rounded-full border border-white/10 hover:border-cyan-400 hover:text-cyan-400 transition"
+            >
+              <FaTwitter size={16} />
+            </a>
+            <a
+              href="#"
+              className="p-3 rounded-full border border-white/10 hover:border-cyan-400 hover:text-cyan-400 transition"
+            >
+              <FaGithub size={16} />
+            </a>
+          </div>
         </div>
 
         {/* Contact */}
@@ -94,25 +125,6 @@ const Footer = () => {
             100% {
               transform: translateY(-120px) translateX(40px);
             }
-          }
-
-          @keyframes orbitDot {
-            0% {
-              transform: translateY(0) scale(1);
-              opacity: 0.8;
-            }
-            50% {
-              transform: translateY(-6px) scale(1.1);
-              opacity: 1;
-            }
-            100% {
-              transform: translateY(0) scale(1);
-              opacity: 0.8;
-            }
-          }
-
-          .animate-orbitDot {
-            animation: orbitDot 3s ease-in-out infinite;
           }
         `}
       </style>
