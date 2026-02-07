@@ -1,17 +1,39 @@
 const Footer = () => {
+  const stars = Array.from({ length: 22 });
+
   return (
-<footer className="relative overflow-hidden bg-black text-gray-300">
-
-
+    <footer className="relative overflow-hidden bg-black text-gray-300">
       
-      {/* Floating stars */}
+      {/* Moving stars */}
       <div className="absolute inset-0 pointer-events-none">
-        <span className="absolute top-10 left-1/4 w-1.5 h-1.5 bg-white/40 rounded-full" />
-        <span className="absolute top-1/2 left-1/2 w-2 h-2 bg-white/60 rounded-full" />
-        <span className="absolute bottom-16 right-1/4 w-1 h-1 bg-white/30 rounded-full" />
-        <span className="absolute bottom-24 left-1/3 w-1.5 h-1.5 bg-cyan-400/40 rounded-full" />
+        {stars.map((_, i) => {
+          const size = Math.random() * 2 + 1; // 1–3px
+          const opacity = Math.random() * 0.5 + 0.2;
+          const duration = Math.random() * 20 + 20; // 20–40s
+          const delay = Math.random() * 10;
+          const isCyan = Math.random() > 0.8;
+
+          return (
+            <span
+              key={i}
+              className={`absolute rounded-full ${
+                isCyan ? "bg-cyan-400" : "bg-white"
+              }`}
+              style={{
+                width: `${size}px`,
+                height: `${size}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                opacity,
+                animation: `floatStar ${duration}s linear infinite`,
+                animationDelay: `${delay}s`,
+              }}
+            />
+          );
+        })}
       </div>
 
+      {/* Content */}
       <div className="relative max-w-7xl mx-auto px-10 py-24 grid grid-cols-1 md:grid-cols-3 gap-20">
         
         {/* Left links */}
@@ -28,22 +50,21 @@ const Footer = () => {
 
         {/* Center brand */}
         <div className="flex flex-col items-center text-center">
-          <div className="mb-4">
-            <span className="inline-block w-2 h-2 rounded-full bg-white shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
+          <div className="mb-4 relative flex justify-center">
+            <span
+              className="
+                inline-block w-2 h-2 rounded-full bg-white
+                shadow-[0_0_20px_rgba(255,255,255,0.9)]
+                animate-orbitDot
+              "
+            />
           </div>
 
           <h2 className="text-cyan-400 text-lg font-semibold mb-3">
             CosmosForSure
           </h2>
 
-          <div className="flex gap-3">
-            <button className="px-4 py-1.5 text-xs rounded bg-cyan-500 text-black hover:bg-cyan-400 transition">
-              Sign Up
-            </button>
-            <button className="px-4 py-1.5 text-xs rounded border border-cyan-400/40 hover:border-cyan-400 transition">
-              Sign In
-            </button>
-          </div>
+         
         </div>
 
         {/* Contact */}
@@ -56,13 +77,45 @@ const Footer = () => {
             support@cosmosforsure.com
           </p>
         </div>
-
       </div>
 
       {/* Bottom */}
       <div className="text-center text-xs text-gray-500 pb-6">
         © {new Date().getFullYear()} CosmosForSure
       </div>
+
+      {/* Animations */}
+      <style>
+        {`
+          @keyframes floatStar {
+            0% {
+              transform: translateY(0) translateX(0);
+            }
+            100% {
+              transform: translateY(-120px) translateX(40px);
+            }
+          }
+
+          @keyframes orbitDot {
+            0% {
+              transform: translateY(0) scale(1);
+              opacity: 0.8;
+            }
+            50% {
+              transform: translateY(-6px) scale(1.1);
+              opacity: 1;
+            }
+            100% {
+              transform: translateY(0) scale(1);
+              opacity: 0.8;
+            }
+          }
+
+          .animate-orbitDot {
+            animation: orbitDot 3s ease-in-out infinite;
+          }
+        `}
+      </style>
     </footer>
   );
 };
